@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    
+    <title>Cadastro de Condomínio | Despensa livre</title>
+    <link rel= "stylesheet" href="https://stackpath.bootstrapcdn.com/fontawesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/LOGI.png"/>
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+   
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <link href="css/mask.js" rel="stylesheet" media="all">
+
+  
+</head>
+
+<body>
+    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960">
+            <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Novo Condomínio</h2>
+                    <h6 class="title">Venha fazer parte dessa comunidade!</h6>
+                    <form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Nome do Condomínio ou Residencial" name="description" required>
+                        </div>
+        
+                        <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="condominiumType">
+                                        <option disabled="disabled" selected="selected" required>Tipo</option>
+                                        <option>Prédios</option>
+                                        <option>Casas</option>
+                                        <option>Mistos</option>
+                                        <option>Outros</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div> 
+                        
+                        <div class="input-group">
+                            <input class="input--style-2"   type="text" placeholder="Solicitante" name="responsible" required>
+                        </div>
+                        <div class="input-group">
+                            <input  class="input--style-2 phone-mask" id="telefone" type="text" placeholder="telefone" name="telephone" required>
+                           
+                        </div>
+        
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" id="cep" type="text" for="cep" placeholder="Cep" name="cep"  required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple" >
+                                        <select id="uf" name="state" >
+                                            <option disabled="disabled" selected="selected" required>Estado</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <input class="input--style-2" id="bairro" type="text" placeholder="Bairro" name="adress">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <input class="input--style-2" type="text" id="cidade" placeholder="Cidade" name="city">
+                            </div>
+                        </div>
+                         <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-2" type="number" placeholder="Número" name="res_code">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-2" type="text" id="logradouro"  placeholder="Logadouro" name="neigborhood">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        <div class="p-t-30">
+                            <button class="btn btn--radius btn--green" type="submit">Solicitar inscrição</button>
+                        </div>
+                        <div class="p-t-30">
+                            <div class="g-recaptcha" data-sitekey="6LdKJ6MZAAAAAHkSsv15PhJJUkg6X9cyAlF2nMIO"></div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="js/global.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+
+</html>

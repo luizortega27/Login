@@ -100,10 +100,8 @@ function passwordToggle() {
 }
 
 $(document).ready(function () {
-    $('#telefone').mask('(00) 0000-0000');
+    $('#telefone').mask('(00) 0000-00000');
 });
-
-
 
 
 $(document).ready(function () {
@@ -112,4 +110,30 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#data').mask('00/00/0000');
+});
+
+"99999-999"
+
+$(document).ready(function () {
+    $('cepmask').mask("00000-000");
+});
+
+$("#cep").focusout(function () {
+    
+    $.ajax({
+        
+        url: 'https://viacep.com.br/ws/' + $(this).val() + '/json/unicode/',
+        dataType: 'json',
+        success: function (resposta) {
+            $("#logradouro").val(resposta.logradouro);
+            $("#cep").mask("00000-000");
+            $("#complemento").val(resposta.complemento);
+            $("#bairro").val(resposta.bairro);
+            $("#cidade").val(resposta.localidade);
+            $("#uf").val(resposta.uf);
+            $("#pais").val(resposta.pais);
+            
+            $("#numero").focus();
+        }
+    });
 });
